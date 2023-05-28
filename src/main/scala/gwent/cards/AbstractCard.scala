@@ -1,8 +1,13 @@
 package cl.uchile.dcc
 package gwent.cards
 
-/**
- *Documentar el codigo
+/** An abstract class representing the troop cards.
+ *
+ * AbstractCard is an abstract class that represents the troop cards with a name, description and power.
+ * 
+ * @constructor Creates a new Card with the given name, description and power.
+ *              
+ * @see Card             
  */
 
 abstract class AbstractCard protected(val name: String, val description: String, val power: Int) extends Card {

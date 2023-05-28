@@ -6,5 +6,5 @@ package gwent.board
  */
 class Board (val row : String ){
 
-
+//hola123
 }

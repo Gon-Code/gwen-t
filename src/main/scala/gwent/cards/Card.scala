@@ -16,8 +16,8 @@ package gwent.cards
  * The actual content of these properties, as well as any additional properties or
  * behaviours, are to be defined in the concrete classes that extend this trait.
  *
- * @author <a href="https://www.github.com/r8vnhill">R8V</a>
- * @author ~YOUR NAME~
+ * 
+ * @author ~Gonzalo Cartes~
  * @version 1.1
  * @since 1.0
  */

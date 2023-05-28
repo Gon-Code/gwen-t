@@ -3,7 +3,7 @@ package gwent
 
 import munit.FunSuite
 
-/**
+/** Aqui se hace la magia
  *
  */
 class PlayerTest extends FunSuite {
