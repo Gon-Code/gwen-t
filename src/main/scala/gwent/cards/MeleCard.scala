@@ -13,6 +13,8 @@ package gwent.cards
  * @see Card
  */
 class MeleCard(name: String, description: String, power: Int) extends AbstractCard (name, description, power){
-  
-  
+
+  /** If the power of the card is affected by other cards, we ensure that the current power can't be lower than zero */
+  if(currentPower < 0) currentPower = 0
+
 }

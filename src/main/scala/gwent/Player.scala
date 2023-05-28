@@ -16,19 +16,20 @@ import gwent.cards.Card
  * @constructor Creates a new player with the specified name,gem,_deck and _hand.
  *
  */
-class Player (val name:String , var gem :Int, private var deck : List[Card],private var hand : List[Card]) {
+class Player (val name:String , val gem :Int, private var deck : List[Card],private var hand : List[Card]) {
   /** Accessor method for the player's deck */
   def getDeck: List[Card] = deck
 
   /** Accessor method for the player's hand */
   def getHand: List[Card] = hand
-  
-  /** The gem count can't be lower than zero */
-  if(gem < 0){
-    gem = 0
-  }
 
-  /** Take the first card in the _deck and adds it to the _hand. */
+  /** The current gem count of the player, when the var currentGem is equal to zero, the game is over */
+  var currentGem : Int = gem
+
+  /** The gem count can't be lower than zero */
+  if(currentGem < 0) currentGem = 0
+
+  /** Take the first card in the deck and adds it to the hand. */
   def drawCard(): Card = {
     val card = deck.head
     deck = deck.tail

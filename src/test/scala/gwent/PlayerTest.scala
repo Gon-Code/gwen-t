@@ -19,7 +19,7 @@ class PlayerTest extends FunSuite {
     Player = new Player("Gonzalo", gem_count, deck_cards,hand_cards)
   }
   test("A player gem count can´t take a negative value"){
-    assertEquals(Player.gem, 0)
+    assertEquals(Player.currentGem, 0)
   }
   test("The players always start with 25 cards in their decks"){
     assertEquals(Player.getDeck.size, 25 )

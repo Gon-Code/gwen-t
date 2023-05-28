@@ -16,6 +16,6 @@ package gwent.cards
  */
 
 class WeatherCard(val name : String, val description : String) extends Card {
-
-
+  
+  
 }
