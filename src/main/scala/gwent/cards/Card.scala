@@ -1,6 +1,11 @@
 package cl.uchile.dcc
 package gwent.cards
 
+import gwent.players.{Player_1,Player_2}
+import gwent.board.Board
+
+import scala.annotation.targetName
+
 /** Trait representing a card in the Gwen't game.
  *
  * A card is characterized by its [[name]] and [[description]].
@@ -16,7 +21,6 @@ package gwent.cards
  * The actual content of these properties, as well as any additional properties or
  * behaviours, are to be defined in the concrete classes that extend this trait.
  *
- * 
  * @author ~Gonzalo Cartes~
  * @version 1.1
  * @since 1.0
@@ -32,4 +36,9 @@ trait Card {
    * This is an immutable property.
    */
   val description: String
+
+  /* def play_player_1(player : Player_1 , board: Board) : Unit
+
+  def play_player_2(player : Player_2 , board: Board) : Unit
+}*/
 }

@@ -1,22 +1,22 @@
 package cl.uchile.dcc
 package gwent
 
-import gwent.Player
 import gwent.cards.RangedCard
+import cl.uchile.dcc.gwent.players.{Player_1, Player_2}
 import munit.FunSuite
 
-/** A testing class for the Player class
+/** A testing class for the Player_2 class
  *
  *
  */
-class PlayerTest extends FunSuite {
+class Player_2Test extends FunSuite {
   val gem_count: Int = -3
   val Archer = new RangedCard("Archer","A woman with a bow",4)
   val deck_cards : List[RangedCard] = List.fill(25)(Archer)
   val hand_cards : List[RangedCard] = List.fill(5)(Archer)
-  var Player : Player = _
+  var Player : Player_2 = _
   override def beforeEach(context:BeforeEach): Unit = {
-    Player = new Player("Gonzalo", gem_count, deck_cards,hand_cards)
+    Player = new Player_2("Gonzalo", gem_count, deck_cards,hand_cards)
   }
   test("A player gem count can´t take a negative value"){
     assertEquals(Player.currentGem, 0)
