@@ -15,11 +15,14 @@ import gwent.players.{Player_1, Player_2}
  * @constructor Creates a new Weather Card with the specified name and description.
  * @see Card
  */
-class SiegeCard (name : String , description : String ,power : Int) extends AbstractCard (name, description, power) {
+class SiegeCard (name : String , description : String ,_power : Int) extends AbstractCard (name, description, _power) {
 
-  /** If the power of the card is affected by other cards, we ensure that the current power can't be lower than zero */
-  if (currentPower < 0) currentPower = 0
-
+  /** Auxiliary constructor for the class
+   * Now the user can create a Siege Card without a name */
+  def this(name: String, _power: Int) = {
+    this(name, "This card has no description", _power)
+  }
+  
   override def play_player_1(player: Player_1, board: Board): Unit = {
     board.SiegeZone_1 = board.SiegeZone_1 :+ this
   }

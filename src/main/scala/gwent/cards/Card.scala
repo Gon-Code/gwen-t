@@ -37,8 +37,5 @@ trait Card {
    */
   val description: String
 
-  /* def play_player_1(player : Player_1 , board: Board) : Unit
 
-  def play_player_2(player : Player_2 , board: Board) : Unit
-}*/
 }
