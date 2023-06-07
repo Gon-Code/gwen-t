@@ -15,6 +15,6 @@ This project's goal is to create a (simplified) clone of the
 
 ## Diagrama de estados
 
-![Diagrama de estados](docs/diagrama-estados.png)
+![Diagrama de estados](docs/diagama-estados.png)
 
 **The rest of the documentation is left for the users of this template to complete**
