@@ -5,12 +5,7 @@ import gwent.board.Board
 import gwent.cards.{Card, MeleCard, RangedCard, SiegeCard, WeatherCard}
 
 /** An interface that will define the different players that can play the game
- *
- *
- *
- *
- *
- *
+ * 
  */
 
 trait Player {
@@ -20,6 +15,7 @@ trait Player {
   protected var _gem: Int
   protected var _deck: List[Card]
   protected var _hand: List[Card]
+  
   
   
 }

@@ -29,26 +29,26 @@ class Player_1 ( name:String , _gem :Int, _deck : List[Card], _hand : List[Card]
  * @param board Is the board where the card x will be played
  */
   def play(x : MeleCard,board: Board):Unit={
-    val newHand: List[Card] = _hand.dropWhile(_.name == x.name).headOption.toList ++ _hand.dropWhile(_.name == x.name).tail
-    _hand = newHand
+    val newHand: List[Card] = getHand.filterNot(_ eq x)
+    hand_(newHand)
     x.play_player_1(this,board)
   }
 
   def play(x : RangedCard,board: Board): Unit={
-    val newHand: List[Card] = _hand.dropWhile(_.name == x.name).headOption.toList ++ _hand.dropWhile(_.name == x.name).tail
-    _hand = newHand
+    val newHand: List[Card] = getHand.filterNot(_ eq x)
+    hand_(newHand)
     x.play_player_1(this,board)
   }
 
   def play(x:SiegeCard,board: Board) : Unit = {
-    val newHand: List[Card] = _hand.dropWhile(_.name == x.name).headOption.toList ++ _hand.dropWhile(_.name == x.name).tail
-    _hand = newHand
+    val newHand: List[Card] = getHand.filterNot(_ eq x)
+    hand_(newHand)
     x.play_player_1(this,board)
   }
 
   def play(x: WeatherCard , board: Board) : Unit = {
-    val newHand: List[Card] = _hand.dropWhile(_.name == x.name).headOption.toList ++ _hand.dropWhile(_.name == x.name).tail
-    _hand = newHand
+    val newHand: List[Card] = getHand.filterNot(_ eq x)
+    hand_(newHand)
     x.play_player_1(this,board)
   }
 }

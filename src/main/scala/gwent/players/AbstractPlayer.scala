@@ -23,13 +23,13 @@ abstract class AbstractPlayer (val name: String,protected var _gem : Int , prote
   }
 
   /** Setter for the _deck field */
-  def deck_(card: Card): Unit = {
-    _deck = card :: _deck
+  def deck_(new_deck: List[Card]): Unit = {
+    _deck = new_deck
   }
 
   /** Setter fot the _hand field */
-  def hand_(card: Card): Unit = {
-    _hand = card :: _hand
+  def hand_(new_hand: List[Card]): Unit = {
+    _hand = new_hand
   }
 
   /** Take the first card in the deck and adds it to the hand. */

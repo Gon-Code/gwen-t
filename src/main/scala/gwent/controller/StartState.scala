@@ -1,6 +1,8 @@
 package cl.uchile.dcc
 package gwent.controller
 
+import gwent.cards.Card
+/*
 class StartState(controller: GameController) extends GameState {
   override def startGame(): Unit = {
     /* ... */
@@ -17,3 +19,4 @@ class StartState(controller: GameController) extends GameState {
     controller.state = new /* ... */
   }
 }
+*/
