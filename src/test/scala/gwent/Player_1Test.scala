@@ -6,6 +6,7 @@ import gwent.board.Board
 import gwent.players.{Player_1, Player_2}
 import munit.FunSuite
 
+
 /** A testing class for the Player class
  *
  *
@@ -28,6 +29,7 @@ class Player_1Test extends FunSuite {
   test("Mi first player one") {
     assertEquals(Player.name, "Gonzalo")
   }
+
   test("Changing the deck of a Player_1 Class"){
     Player.deck_(List.empty[Card])
     assertEquals(Player.getDeck.size,0)

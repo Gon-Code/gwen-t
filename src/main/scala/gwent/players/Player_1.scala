@@ -19,8 +19,7 @@ import math.max
  * @constructor Creates a new player with the specified name,gem,_deck and _hand.
  *
  */
-class Player_1 ( name:String , _gem :Int, _deck : List[Card], _hand : List[Card])
-  extends AbstractPlayer(name, _gem, _deck, _hand){
+class Player_1 ( name: String , _gem :Int, _deck : List[Card], _hand : List[Card]) extends AbstractPlayer(name, _gem, _deck, _hand){
 
   /** The play method will play a card to their respective zone, the result will be determined
    * by the player and the card */
