@@ -26,6 +26,10 @@ class Player_2Test extends FunSuite {
   test("Mi first player two") {
     assertEquals(Player.name, "Gonzalo")
   }
+  test("Changing the deck of a Player_2 Class") {
+    Player.deck_(List.empty[Card])
+    assertEquals(Player.getDeck.size, 0)
+  }
   test("A player gem count can´t take a negative value") {
     val gem: Int = Player.gem
     Player.gem_(gem)
@@ -50,7 +54,7 @@ class Player_2Test extends FunSuite {
 
   test("We can add cards manually to the hand") {
     val hand_count: Int = Player.getHand.size
-    Player.play(Archer,board)
+    Player.play(Player,Archer,board)
     assertEquals(Player.getHand.size, hand_count -1)
   }
 }

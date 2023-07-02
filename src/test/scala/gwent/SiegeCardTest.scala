@@ -10,7 +10,7 @@ import munit.FunSuite
 class SiegeCardTest extends FunSuite {
   val siege : SiegeCard = new SiegeCard("Catapult","No troop can be safe",-1)
   val gem_count: Int = 2
-  val Satoru_Geto: MeleCard = new MeleCard("Satoru Geto", 10)
+  val Satoru_Geto: SiegeCard = new SiegeCard("Satoru Geto", 10)
   val hand_cards: List[Card] = List(siege, Satoru_Geto)
   val deck_cards: List[Card] = List()
   val board: Board = new Board()
@@ -31,12 +31,12 @@ class SiegeCardTest extends FunSuite {
     assertEquals(siege.currentPower, 0)
   }
   test("Player 1 plays the 'siege' card which is a Siege Card") {
-    siege.play_player_1(Player1, board)
+    Player1.play(Player1,Satoru_Geto,board)
     assertEquals(board.SiegeZone_1.size, 1)
   }
 
   test("Player 2 plays the 'siege' card which is a Siege Card ") {
-    siege.play_player_2(Player2, board)
+    Player2.play(Player2,siege,board)
     assertEquals(board.SiegeZone_2.size, 1)
   }
 }

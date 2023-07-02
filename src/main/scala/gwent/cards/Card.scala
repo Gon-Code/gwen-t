@@ -1,7 +1,7 @@
 package cl.uchile.dcc
 package gwent.cards
 
-import gwent.players.{Player_1,Player_2}
+import gwent.players.*
 import gwent.board.Board
 
 import scala.annotation.targetName
@@ -36,6 +36,9 @@ trait Card {
    * This is an immutable property.
    */
   val description: String
-
-
+  
+  /** The method play will allow the double dispatch for the card that will be played on the board */
+  def playto(player: Player_1,board: Board):Unit
+  
+  def playto(player : Player_2,board: Board):Unit
 }

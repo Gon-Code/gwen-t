@@ -14,7 +14,8 @@ class Player_1Test extends FunSuite {
   val gem_count: Int = -3
   val Archer = new RangedCard("Archer", "A woman with a bow", 4)
   val Destroyer =  new MeleCard("Destroyer","The destroyer of worlds",7)
-  val deck_cards: List[Card] = List(Archer,Destroyer)
+  val Catapult = new SiegeCard("Catapult","The classic siege weapon",4)
+  val deck_cards: List[Card] = List(Archer,Destroyer,Catapult)
   val hand_cards: List[Card] = List(Archer)
   var board: Board = _
   var Player: Player_1 = _
@@ -26,6 +27,10 @@ class Player_1Test extends FunSuite {
 
   test("Mi first player one") {
     assertEquals(Player.name, "Gonzalo")
+  }
+  test("Changing the deck of a Player_1 Class"){
+    Player.deck_(List.empty[Card])
+    assertEquals(Player.getDeck.size,0)
   }
   test("A player gem count can´t take a negative value") {
     val gem: Int = Player.gem
@@ -51,7 +56,7 @@ class Player_1Test extends FunSuite {
   }
   test("We can refresh the cards in the hand") {
     val hand_count: Int = Player.getHand.size
-    Player.play(Archer, board)
+    Player.play(Player,Archer, board)
     assertEquals(Player.getHand.size, hand_count - 1)
   }
 }

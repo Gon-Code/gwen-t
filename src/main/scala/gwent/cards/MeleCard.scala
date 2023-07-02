@@ -1,10 +1,9 @@
 package cl.uchile.dcc
 package gwent.cards
 
-
 import gwent.board.Board
 import math.max
-import gwent.players.{Player_1,Player_2}
+import gwent.players.*
 import scala.::
 
 /** MeleCard is a type of card that represents the mele troop cards.
@@ -22,10 +21,10 @@ class MeleCard(name: String, description: String , _power: Int) extends Abstract
   def this(name: String, _power:Int)={
     this(name,"This card has no description",_power)
   }
-  override def play_player_1(player:Player_1,board: Board):Unit={
+  override def playto(player: Player_1, board: Board): Unit = {
     board.MeleZone_1 = board.MeleZone_1 :+ this
   }
-  override def play_player_2(player: Player_2,board:Board):Unit={
+  override def playto(player:Player_2,board:Board) : Unit = {
     board.MeleZone_2 = board.MeleZone_2 :+ this
   }
 }

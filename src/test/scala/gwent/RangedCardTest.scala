@@ -33,12 +33,12 @@ class RangedCardTest extends FunSuite {
     assertEquals(ranged.currentPower,0)
   }
   test("Player 1 plays the 'ranged' card which is a Ranged Card") {
-    ranged.play_player_1(Player1, board)
+    Player1.play(Player1,Satoru_Geto,board)
     assertEquals(board.RangedZone_1.size, 1)
   }
 
   test("Player 2 plays the 'ranged' card which is a Ranged Card ") {
-    ranged.play_player_2(Player2, board)
+    Player2.play(Player2,ranged,board)
     assertEquals(board.RangedZone_2.size, 1)
   }
 }

@@ -29,22 +29,4 @@ abstract class AbstractCard (val name: String, val description: String, protecte
     def power_(newPower: Int): Unit = {
         _power = math.max(0,newPower)
     }
-    
-    /** This method allows the double dispatch between players and cards
-     * If a class player 1 plays a card we use this method */
-    def play_player_1(player:Player_1 , board: Board) : Unit={
-        
-    }
-
-    /** This method allows the double dispatch between players and cards
-     * If a class player 2 plays a card we use this method */
-    def play_player_2(player : Player_2 , board: Board) : Unit={
-      
-  }
-    /** This method allows the cards to use their own effects on the field
-     * Not all the cards has effect, this has to be implemented */
-    def effect():Unit={
-
-    }
-  
-}
+}     

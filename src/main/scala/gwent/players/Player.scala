@@ -15,7 +15,9 @@ trait Player {
   protected var _gem: Int
   protected var _deck: List[Card]
   protected var _hand: List[Card]
-  
-  
+
+  /** The play method will allow to double dispatch the cards into
+   *  their respective zones */
+    def play(player:Player,card:Card,board: Board):Unit
   
 }

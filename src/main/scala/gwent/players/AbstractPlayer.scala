@@ -27,7 +27,7 @@ abstract class AbstractPlayer (val name: String,protected var _gem : Int , prote
     _deck = new_deck
   }
 
-  /** Setter fot the _hand field */
+  /** Setter for the _hand field */
   def hand_(new_hand: List[Card]): Unit = {
     _hand = new_hand
   }
@@ -44,15 +44,4 @@ abstract class AbstractPlayer (val name: String,protected var _gem : Int , prote
   def shuffleDeck(): Unit = {
     _deck = scala.util.Random.shuffle(_deck)
   }
-  /** The next methods will play each card in their respective zone of the board.
-   * As you can see, every method has a different type parameter.
-   */
-  def play(x: MeleCard, board: Board): Unit
-
-  def play(x: RangedCard, board: Board): Unit
-
-  def play(x: SiegeCard, board: Board): Unit
-
-  def play(x: WeatherCard, board: Board): Unit
-
 }

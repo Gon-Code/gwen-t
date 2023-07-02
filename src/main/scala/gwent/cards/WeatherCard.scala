@@ -17,10 +17,11 @@ import gwent.players.{Player_1,Player_2}
 
 class WeatherCard(val name : String, val description : String) extends Card {
 
-  def play_player_1(player:Player_1,board: Board):Unit={
+  override def playto(player: Player_1, board: Board): Unit = {
     board.WeatherZone = board.WeatherZone :+ this
   }
-  def play_player_2(player:Player_2,board: Board):Unit={
+
+  override def playto(player: Player_2, board: Board): Unit = {
     board.WeatherZone = board.WeatherZone :+ this
   }
 }

@@ -25,32 +25,15 @@ class Player_2 (name:String , _gem :Int, _deck : List[Card],_hand : List[Card])
 
   /** Dispatch the cards to their respective zones
    * There one method play for each type card . The method play also takes out the card played from the hand an puts it on the board.
-   * @param x Is the card that will be played on the board
+   * @param card Is the card that will be played on the board
    * @param board Is the board where the card x will be played
    */
-  def play(x : MeleCard,board: Board):Unit={
-    val newHand: List[Card] = getHand.filterNot(_ eq x)
+  override def play(player: Player, card: Card, board: Board): Unit = {
+    val newHand: List[Card] = getHand.filterNot(_ eq card)
     hand_(newHand)
-    x.play_player_2(this,board)
+    card.playto(this, board)
   }
-
-  def play(x : RangedCard,board: Board): Unit={
-    val newHand: List[Card] = getHand.filterNot(_ eq x)
-    hand_(newHand)
-    x.play_player_2(this,board)
-  }
-
-  def play(x:SiegeCard,board: Board) : Unit = {
-    val newHand: List[Card] = getHand.filterNot(_ eq x)
-    hand_(newHand)
-    x.play_player_2(this,board)
-  }
-
-  def play(x: WeatherCard , board: Board) : Unit = {
-    val newHand: List[Card] = getHand.filterNot(_ eq x)
-    hand_(newHand)
-    x.play_player_2(this,board)
-  }
+  
 }
 
 

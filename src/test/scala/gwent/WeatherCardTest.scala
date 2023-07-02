@@ -32,12 +32,12 @@ class WeatherCardTest extends FunSuite {
     assertEquals(weather.description,"Reduce the attack of all the troops by 2")
   }
   test("Player 1 plays the 'weather' card which is a Weather Card") {
-    weather.play_player_1(Player1, board)
+    Player1.play(Player1,weather,board)
     assertEquals(board.WeatherZone.size, 1)
   }
 
   test("Player 2 plays the 'weather' card which is a Weather Card ") {
-    weather.play_player_2(Player2, board)
+    Player2.play(Player2,weather,board)
     assertEquals(board.WeatherZone.size, 1)
   }
 

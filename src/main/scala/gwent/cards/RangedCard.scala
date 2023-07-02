@@ -23,12 +23,12 @@ class RangedCard(name:String , description : String , _power : Int) extends Abst
   def this(name: String, _power: Int) = {
     this(name, "This card has no description", _power)
   }
-  
-  override def play_player_1(player: Player_1, board: Board): Unit = {
+
+  override def playto(player: Player_1, board: Board): Unit = {
     board.RangedZone_1 = board.RangedZone_1 :+ this
   }
 
-  override def play_player_2(player: Player_2, board: Board): Unit = {
+  override def playto(player: Player_2, board: Board): Unit = {
     board.RangedZone_2 = board.RangedZone_2 :+ this
   }
 }

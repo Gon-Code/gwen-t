@@ -39,42 +39,42 @@ class BoardTest extends FunSuite {
   }
 
   test("If player_1 plays a Mele Card, the Mele Card is going to the mele zone 1"){
-    player_1.play(Gon,board)
+    player_1.play(player_1,Gon,board)
     assertEquals(board.MeleZone_1.size, 1)
     assertEquals(board.MeleZone_1.head,Gon)
   }
   test("If player_1 plays a Ranged Card, the Ranged Card is going to the ranged zone 1") {
-    player_1.play(Archer,board)
+    player_1.play(player_1,Archer,board)
     assertEquals(board.RangedZone_1.size, 1)
     assertEquals(board.RangedZone_1.head, Archer)
   }
   test("If player_1 plays a Siege Card, the Siege Card is going to the siege zone 1") {
-    player_1.play(Catapult,board)
+    player_1.play(player_1,Catapult,board)
     assertEquals(board.SiegeZone_1.size, 1)
     assertEquals(board.SiegeZone_1.head, Catapult)
   }
   test("If player_1 plays a Weather Card, the Weather Card is going to the weather zone") {
-    player_1.play(Storm, board)
+    player_1.play(player_1,Storm, board)
     assertEquals(board.WeatherZone.size, 1)
     assertEquals(board.WeatherZone.head, Storm)
   }
   test("If player_2 plays a Mele Card, the Mele Card is going to the mele zone 2") {
-    player_2.play(Gon,board)
+    player_2.play(player_2,Gon,board)
     assertEquals(board.MeleZone_2.size, 1)
     assertEquals(board.MeleZone_2.head, Gon)
   }
   test("If player_2 plays a Ranged Card, the Ranged Card is going to the ranged zone 2") {
-    player_2.play(Archer,board)
+    player_2.play(player_2,Archer,board)
     assertEquals(board.RangedZone_2.size, 1)
     assertEquals(board.RangedZone_2.head, Archer)
   }
   test("If player_2 plays a Siege Card, the Siege Card is going to the siege zone 2") {
-    player_2.play(Catapult,board)
+    player_2.play(player_2,Catapult,board)
     assertEquals(board.SiegeZone_2.size, 1)
     assertEquals(board.SiegeZone_2.head, Catapult)
   }
   test("If player_2 plays a Weather Card, the Weather Card is going to the weather zone") {
-    player_2.play(Storm, board)
+    player_2.play(player_2,Storm, board)
     assertEquals(board.WeatherZone.size, 1)
     assertEquals(board.WeatherZone.head, Storm)
   }

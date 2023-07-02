@@ -35,12 +35,12 @@ class MeleCardTest extends FunSuite {
   }
 
   test("Player 1 plays the 'mele' card which is a Mele Card"){
-    mele.play_player_1(Player1,board)
+    Player1.play(Player1,Satoru_Geto,board)
     assertEquals(board.MeleZone_1.size,1)
   }
 
   test("Player 2 plays the 'mele' card which is a Mele Card "){
-    mele.play_player_2(Player2,board)
+    Player2.play(Player2,mele,board)
     assertEquals(board.MeleZone_2.size,1)
   }
 }
