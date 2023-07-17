@@ -4,6 +4,7 @@ package gwent.players
 import gwent.cards.{Card, MeleCard, RangedCard, SiegeCard, WeatherCard}
 import gwent.board.Board
 
+
 abstract class AbstractPlayer (val name: String,protected var _gem : Int , protected var _deck : List[Card],
                                protected var _hand : List[Card]) extends Player{
 
@@ -15,7 +16,6 @@ abstract class AbstractPlayer (val name: String,protected var _gem : Int , prote
 
   /** Accessor method fot he player's gem count */
   def gem: Int = _gem
-
   /** Setter for the _gem field
    * The gem count can't be lower than zero */
   def gem_(newGem: Int): Unit = {

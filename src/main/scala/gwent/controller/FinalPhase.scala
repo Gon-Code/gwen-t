@@ -1,6 +1,9 @@
 package cl.uchile.dcc
 package gwent.controller
 
-class FinalPhase {
+class FinalPhase(context: GameController) extends GameState (context){
 
+  def toBattlePhase(): Unit = {
+    
+  }
 }

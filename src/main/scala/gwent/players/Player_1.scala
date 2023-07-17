@@ -20,7 +20,8 @@ import math.max
  *
  */
 class Player_1 ( name: String , _gem :Int, _deck : List[Card], _hand : List[Card]) extends AbstractPlayer(name, _gem, _deck, _hand){
-
+  
+  
   /** The play method will play a card to their respective zone, the result will be determined
    * by the player and the card */
   override def play(player:Player,card:Card,board: Board):Unit={
