@@ -6,6 +6,7 @@ import munit.FunSuite
 class MainPhase_2Test extends FunSuite {
   var controller: GameController = _
 
+
   override def beforeEach(context: BeforeEach): Unit = {
     controller = new GameController()
   }
