@@ -16,6 +16,31 @@ class GameStateTest extends FunSuite{
     val new_context : GameController = new GameController()
     GameState.SetContext(new_context)
     assertNotEquals(context,new_context)
+  }
 
+  test("Invalid transition to MainPhase_1"){
+    intercept[Exception]{
+      GameState.toMainPhase_1()
+    }
+  }
+  test("Invalid transition to MainPhase_2") {
+    intercept[Exception] {
+      GameState.toMainPhase_2()
+    }
+  }
+  test("Invalid transition to Final Phase") {
+    intercept[Exception] {
+      GameState.toFinalPhase()
+    }
+  }
+  test("Invalid transition to Battle Phase") {
+    intercept[Exception] {
+      GameState.toBattlePhase()
+    }
+  }
+  test("Invalid transition to Draw Phase") {
+    intercept[Exception] {
+      GameState.toDrawPhase()
+    }
   }
 }

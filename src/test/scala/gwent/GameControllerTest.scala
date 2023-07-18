@@ -41,6 +41,7 @@ class GameControllerTest extends FunSuite{
     }
   }
   test("Transition to MainPhase_1 works properly"){
+    controller.StartGame("Gonzalo","Satoru Geto")
     controller.MainPhase_1()
   }
 }

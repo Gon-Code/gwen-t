@@ -23,6 +23,7 @@ class GameState(private var context : GameController) {
   def toDrawPhase(): Unit = {
     transitionError("Wrong transition")
   }
+  
   /** Initially every transition to another state is invalid */
   def toMainPhase_1(): Unit = {
     transitionError("Wrong transition")
@@ -31,6 +32,8 @@ class GameState(private var context : GameController) {
   def toMainPhase_2() : Unit = {
     transitionError("Wrong transition")}
 
+  
+ 
   /** Initially every transition to another state is invalid */
   def toFinalPhase() : Unit = {
     transitionError("Wrong transition")}
