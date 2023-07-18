@@ -5,7 +5,7 @@ import gwent.controller.GameController
 
 @main
 def main(): Unit = {
-  val controlador : GameController = new GameController()
-  controlador.StartGame()
+  //val controller : GameController = new GameController()
+  //controller.StartGame()
   println("Hello world!")
 }

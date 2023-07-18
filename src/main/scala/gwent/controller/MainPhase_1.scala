@@ -3,12 +3,12 @@ package gwent.controller
 
 class MainPhase_1 (context : GameController) extends GameState (context){
 
-  def toMainPhase2():Unit={
+  override def toMainPhase_2():Unit={
     //Player can play 1 card or pass
-
+    context.state = new MainPhase_2(context)
   }
-  def toFinalPhase() : Unit = {
-
+  override def toFinalPhase() : Unit = {
+      context.state = new FinalPhase(context)
   }
 
 }

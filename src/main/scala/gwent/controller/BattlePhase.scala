@@ -5,11 +5,9 @@ import gwent.players.*
 
 class BattlePhase (context : GameController) extends GameState (context){
 
-  def toMainPhase_1(): Unit = {
-
+  override def toMainPhase_1(): Unit = {
+    context.state = new MainPhase_1(context)
   }
-  def toEndPhase(): Unit = {
 
-  }
   
 }

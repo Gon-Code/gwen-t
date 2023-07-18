@@ -3,7 +3,7 @@ package gwent.controller
 
 class FinalPhase(context: GameController) extends GameState (context){
 
-  def toBattlePhase(): Unit = {
-    
+  override def toBattlePhase(): Unit = {
+    context.state = new BattlePhase(context)
   }
 }
