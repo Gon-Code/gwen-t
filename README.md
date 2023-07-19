@@ -5,6 +5,7 @@ Este proyecto es una tarea para el curso CC3001-1 de la Universidad de Chile, di
 
 ### Índice
 -[Diagrama de estados](#diagrama-de-estados)
+
 -[Licencia](#licencia)
 
 
